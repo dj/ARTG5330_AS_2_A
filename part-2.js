@@ -10,6 +10,12 @@ var newArray = [];
 //hint: array.push
 //hint: Math.random() creates a random value between 0 and 1
 
+for(var i = 0; i < 1000; i++) {
+  var num = Math.floor(Math.random()*(200-49)+50);
+  newArray.push(num);
+}
+
+console.log(newArray);
 
 //TODO: after you populate the array, find the average of all the values in the array
 
@@ -17,5 +23,10 @@ var arraySum = 0;
 newArray.forEach(function(arrayElement){
 	//hint: here, we are "looping" through the array, accessing each array element one by one
 	//we can add the value to arraySum
-	//and finally, we divide arraySum by the total number of array elements
+  arraySum += arrayElement
+
 });
+
+//and finally, we divide arraySum by the total number of array elements
+var average = arraySum / newArray.length;
+console.log(average);
